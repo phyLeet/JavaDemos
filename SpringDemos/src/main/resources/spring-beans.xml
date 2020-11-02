@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="user" class="com.phyleet.spring5_xmlConf.domain.User"></bean>
+
+    <bean id="book" class="com.phyleet.spring5_xmlConf.domain.Book" scope="prototype">
+        <property name="bname" value="Java面经"/>
+        <property name="bauthor">
+            <null></null>
+        </property>
+        <property name="address">
+            <value>
+                <![CDATA[
+                <<南京>>
+                ]]>
+            </value>
+        </property>
+        <property name="list" ref="bookList"></property>
+    </bean>
+
+    <bean id="order" class="com.phyleet.spring5_xmlConf.domain.Order" init-method="initMethod" destroy-method="destroyMethod">
+        <!--        <constructor-arg name="name" value="一条咸鱼"/>-->
+        <!--        <constructor-arg name="address" value="西安市"/>-->
+        <property name="name" value="一条咸鱼"></property>
+    </bean>
+
+    <bean id="userDao" class="com.phyleet.spring5_xmlConf.dao.UserDaoImpl"></bean>
+
+    <bean id="userService" class="com.phyleet.spring5_xmlConf.service.UserService">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="emp" class="com.phyleet.spring5_xmlConf.domain.Emp">
+        <property name="ename" value="Lucy"></property>
+        <property name="gender" value="女"></property>
+        <property name="dept">
+            <bean id="dept" class="com.phyleet.spring5_xmlConf.domain.Dept">
+                <property name="dname" value="保安部"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="stu" class="com.phyleet.spring5_xmlConf.domain.Stu">
+        <property name="courses">
+            <array>
+                <value>Java课程</value>
+                <value>数据库课程</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>小三</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="java" value="疯狂java"></entry>
+                <entry key="sql" value="疯狂sql"></entry>
+            </map>
+        </property>
+        <property name="sets">
+            <set>
+                <value>MySQL</value>
+                <value>Redis</value>
+            </set>
+        </property>
+
+        <property name="courseList">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="course1" class="com.phyleet.spring5_xmlConf.domain.Course">
+        <property name="cname" value="Spring5框架"></property>
+    </bean>
+    <bean id="course2" class="com.phyleet.spring5_xmlConf.domain.Course">
+        <property name="cname" value="MyBatis框架"></property>
+    </bean>
+
+    <util:list id="bookList">
+        <value>易筋经</value>
+        <value>九阴神功</value>
+        <value>九阳真经</value>
+    </util:list>
+
+    <bean id="myBean" class="com.phyleet.spring5_xmlConf.factoryBean.MyBean"></bean>
+
+    <!--后置处理器-->
+    <bean id="myBeanPost" class="com.phyleet.spring5_xmlConf.domain.MyBeanPost"></bean>
+
+</beans>

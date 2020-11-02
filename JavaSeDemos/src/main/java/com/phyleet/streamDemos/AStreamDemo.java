@@ -3,7 +3,7 @@ package com.phyleet.streamDemos;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class StreamDemo {
+public class AStreamDemo {
     public static void main(String[] args) {
         System.out.println("使用Java7:");
         //计算空字符串
