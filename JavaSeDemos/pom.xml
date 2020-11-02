@@ -7,6 +7,10 @@
     <groupId>com.phyleet</groupId>
     <artifactId>JavaSeDemos</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <!--    利用 IDEA 自动搜索并提示依赖的坐标信息: Ctrl+Alt+Space-->
+    <!--   Alt+Insert 可以手动搜索依赖的坐标信息, 代替网页端 maven仓库-->
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
         <dependency>
@@ -22,5 +26,11 @@
             <version>1.2.73</version>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
