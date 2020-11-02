@@ -80,10 +80,26 @@ public class HelloCompletion {
          */
 
         //language=JSON
-        String jsonStr = "{\"name\": \"liuhd\",\"age\":\"26\"}";
+        String jsonStr = "{\"name\": \"phyleet\",\"age\":\"26\"}";
 
         //language=HTML
         String htmlStr = "<head>Hello inject language</head>";
+
+        /**
+         * 列编辑
+         *  Shift+Enter 发现更多功能
+         *  Ctrl+Shift+方向键 移动一行代码
+         */
+
+        String s1 = "";
+        String s2 = "";
+        String s3 = "";
+        String s4 = "";
+
+        String ss1 = s1 + "abc";
+        String ss2 = s2 + "abc";
+        String ss3 = s3 + "abc";
+        String ss4 = s4 + "abc";
     }
 }
 
