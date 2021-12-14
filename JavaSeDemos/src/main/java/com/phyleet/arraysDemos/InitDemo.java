@@ -11,7 +11,7 @@ public class InitDemo {
 
 
         //静态初始化
-        int[] arr3 = {1,2,3,4,5};
-        int[] arr4 = new int[]{1,2,3,4,};
+        int[] arr3 = {1, 2, 3, 4, 5};
+        int[] arr4 = new int[]{1, 2, 3, 4,};
     }
 }

@@ -22,7 +22,8 @@
         <property name="list" ref="bookList"></property>
     </bean>
 
-    <bean id="order" class="com.phyleet.spring5_xmlConf.domain.Order" init-method="initMethod" destroy-method="destroyMethod">
+    <bean id="order" class="com.phyleet.spring5_xmlConf.domain.Order" init-method="initMethod"
+          destroy-method="destroyMethod">
         <!--        <constructor-arg name="name" value="一条咸鱼"/>-->
         <!--        <constructor-arg name="address" value="西安市"/>-->
         <property name="name" value="一条咸鱼"></property>

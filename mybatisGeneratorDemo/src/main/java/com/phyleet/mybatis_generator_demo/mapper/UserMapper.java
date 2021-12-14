@@ -2,6 +2,7 @@ package com.phyleet.mybatis_generator_demo.mapper;
 
 import com.phyleet.mybatis_generator_demo.pojo.User;
 import com.phyleet.mybatis_generator_demo.pojo.UserExample;
+
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;

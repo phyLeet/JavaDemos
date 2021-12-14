@@ -30,11 +30,11 @@ public class Order {
         this.address = address;
     }
 
-    public void initMethod(){
+    public void initMethod() {
         System.out.println("第三步: 执行初始化方法.");
     }
 
-    public void destroyMethod(){
+    public void destroyMethod() {
         System.out.println("第五步: 执行销毁方法.");
     }
 }

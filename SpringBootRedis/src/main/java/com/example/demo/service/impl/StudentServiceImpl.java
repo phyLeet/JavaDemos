@@ -34,8 +34,9 @@ public class StudentServiceImpl implements StudentService {
         if (hasKey) {
             String redisList = (String) operations.get(key);
 
-            Type type = new TypeToken<List<Student>>() {}.getType();
-            List<Student> list =  new Gson().fromJson(redisList,type);
+            Type type = new TypeToken<List<Student>>() {
+            }.getType();
+            List<Student> list = new Gson().fromJson(redisList, type);
 
             System.out.println("StudentServiceImpl.selectAll() : 从缓存取得数据，条数：" + list.size());
             return list;
@@ -81,7 +82,7 @@ public class StudentServiceImpl implements StudentService {
         Boolean hasKey = redisTemplate.hasKey(key);
 
         int delete = studentMapper.delete(numberCode);
-        if( delete > 0){
+        if (delete > 0) {
             // 缓存存在，进行删除
             if (hasKey) {
                 redisTemplate.delete(key);
@@ -104,7 +105,7 @@ public class StudentServiceImpl implements StudentService {
 
         int update = studentMapper.update(student);
 
-        if( update > 0 ){
+        if (update > 0) {
             // 缓存存在，进行删除
             if (hasKey) {
                 redisTemplate.delete(key);

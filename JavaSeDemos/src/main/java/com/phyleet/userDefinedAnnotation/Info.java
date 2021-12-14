@@ -2,7 +2,7 @@ package com.phyleet.userDefinedAnnotation;
 
 import java.lang.annotation.*;
 
-@Target({ElementType.FIELD,ElementType.TYPE})
+@Target({ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Info {

@@ -31,7 +31,7 @@ public class HelloWorld {
         System.out.println(dd == cc);
         System.out.println(dd.equals(cc));
         System.out.println("----------");
-        System.out.println(ee==ff);
+        System.out.println(ee == ff);
         System.out.println(ee.equals(ff));
     }
 }

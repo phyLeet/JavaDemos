@@ -15,15 +15,15 @@ public class StudentDaoTest {
     private StudentMapper studentMapper;
 
     @Test
-    public void getList(){
+    public void getList() {
         System.out.println(studentMapper.selectAll());
     }
 
     @Test
-    public void getStudent(){
+    public void getStudent() {
         Student student = studentMapper.getStudent("AAAAA1");
 
-        System.out.println( student.toString() );
+        System.out.println(student.toString());
 
     }
 

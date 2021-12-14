@@ -15,8 +15,9 @@ public class StudentServiceTest {
 
     @Autowired
     private StudentService studentService;
+
     @Test
-    public void selectAll(){
+    public void selectAll() {
         List<Student> students = studentService.selectAll();
         System.out.println(students);
     }
